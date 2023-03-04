@@ -60,9 +60,11 @@ def main():
         top3 += f"Word is: {i[0]}\tCount is: {i[1]}\n"
     ip = docker_ip()
 
-    output = f"Text File Paths in {CWD}: {[f.name for f in txt_files]}\n\
-Grand total word is: {total_words}\n\
-Top 3 words in IF.txt:\n{top3}\n\
+    output = f"Text File Paths in {CWD}: {[f.name for f in txt_files]}\n \
+IF words: {sum(IF_words.values())} \n \
+Limerick words: {sum(Limerick_words.values())} \n \
+Grand total word is: {total_words}\n \
+Top 3 words in IF.txt:\n{top3}\n \
 Container IP: {ip}"
 
     print("Writing output...")
